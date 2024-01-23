@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "schoolName": {
+        "type": "string"
+      },
+      "months": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "monthName": {
+              "type": "string"
+            },
+            "days": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "day": {
+                    "type": "integer"
+                  },
+                  "foodCategories": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "categoryName": {
+                          "type": "string",
+                          "enum": ["lunch-entree", "vegetables", "fruit", "milk"]
+                        },
+                        "foodItems": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "itemName": {
+                                "type": "string"
+                              },
+                              "attributeCategories": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "attributeCategoryName": {
+                                      "type": "string",
+                                      "enum": ["nutrition-info", "allergy-info", "others"]
+                                    },
+                                    "attributeCategoryValue": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "required": ["months"]
+  }

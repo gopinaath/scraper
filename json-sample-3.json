@@ -1,0 +1,82 @@
+{
+    "schoolName": "Sample School",
+    "months": [
+        {
+            "monthName": "January",
+            "days": [
+                {
+                    "day": 1,
+                    "foodCategories": [
+                        {
+                            "categoryName": "lunch-entree",
+                            "foodItems": [
+                                {
+                                    "itemName": "Chicken Sandwich",
+                                    "attributeCategories": [
+                                        {
+                                            "attributeCategoryName": "Protein",
+                                            "attributeCategoryValue": ["High"]
+                                        },
+                                        {
+                                            "attributeCategoryName": "Dairy",
+                                            "attributeCategoryValue": ["Low"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "itemName": "Veggie Burger",
+                                    "attributeCategories": [
+                                        {
+                                            "attributeCategoryName": "Vegetable",
+                                            "attributeCategoryValue": ["High"]
+                                        },
+                                        {
+                                            "attributeCategoryName": "Grain",
+                                            "attributeCategoryValue": ["Medium"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "day": 2,
+                    "foodCategories": [
+                        {
+                            "categoryName": "lunch-entree",
+                            "foodItems": [
+                                {
+                                    "itemName": "Pizza",
+                                    "attributeCategories": [
+                                        {
+                                            "attributeCategoryName": "Protein",
+                                            "attributeCategoryValue": ["Medium"]
+                                        },
+                                        {
+                                            "attributeCategoryName": "Dairy",
+                                            "attributeCategoryValue": ["High"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "itemName": "Salad",
+                                    "attributeCategories": [
+                                        {
+                                            "attributeCategoryName": "Vegetable",
+                                            "attributeCategoryValue": ["High"]
+                                        },
+                                        {
+                                            "attributeCategoryName": "Grain",
+                                            "attributeCategoryValue": ["Low"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

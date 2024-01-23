@@ -1,0 +1,9 @@
+{
+    "schoolName": "Sample School",
+    "months": [
+        {
+            "monthName": "January",
+            "days": []
+        }
+    ]
+}
