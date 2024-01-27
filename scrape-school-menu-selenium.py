@@ -54,13 +54,6 @@ school.months.append(month)
 # Find the divs with class 'menu-day-wrapper'
 day_wrappers = driver.find_elements(By.CLASS_NAME, 'menu-day-wrapper')
 
-
-# Print the text of each div
-# for day_text in day_wrappers:
-#     print("day.text = ", day_text.text)
-#     day = Day(day_text.text, [])
-#     month.days.append(day)
-
 # Print the text of each div
 for day_text in day_wrappers:
     print("day.text = ", day_text.text)
