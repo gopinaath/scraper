@@ -6,9 +6,15 @@ import uvicorn
 from bson.json_util import dumps
 from bson import json_util
 import json
+from datetime import datetime, timedelta
+
+from datetime import datetime, timedelta
+import holidays
 
 # Load the .env file
 load_dotenv()
+
+skip_to_next_working_day = True  
 
 # Get the MongoDB connection string from the .env file
 mongodb_url = os.getenv('MONGODB_URL')
@@ -117,6 +123,33 @@ async def get_day_data(school: str, month: str, day: str):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.get('/schools/{school}/today')
+async def get_menu_today(school: str):
+    if skip_to_next_working_day:
+        now = get_next_working_day()
+    else:
+        now = datetime.now()
+    month = now.strftime('%B')
+    date = str(now.day+1)
+    print(f"Month: {month}, Date: {date}")
+    menu_today = await get_day_data(school, month, date)
+    return menu_today
+
+
+def get_next_working_day():
+    us_holidays = holidays.US()
+    now = datetime.now()
+
+    # If today is a holiday, get the next day
+    if now in us_holidays:
+        now += timedelta(days=1)
+
+    # If the next day is a weekend, get the next weekday
+    while now.weekday() > 4 or now in us_holidays:  # 0-4 corresponds to Monday-Friday
+        now += timedelta(days=1)
+
+    return now
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

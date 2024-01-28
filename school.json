@@ -5,51 +5,31 @@
             "monthName": "January",
             "days": [
                 {
-                    "day": "Monday",
+                    "day": "01",
                     "foodCategories": []
                 },
                 {
-                    "day": "Tuesday",
+                    "day": "02",
                     "foodCategories": []
                 },
                 {
-                    "day": "Wednesday",
+                    "day": "03",
                     "foodCategories": []
                 },
                 {
-                    "day": "Thursday",
+                    "day": "04",
                     "foodCategories": []
                 },
                 {
-                    "day": "Friday",
+                    "day": "05",
                     "foodCategories": []
                 },
                 {
-                    "day": "Monday, 01",
+                    "day": "08",
                     "foodCategories": []
                 },
                 {
-                    "day": "Tuesday, 02",
-                    "foodCategories": []
-                },
-                {
-                    "day": "Wednesday, 03",
-                    "foodCategories": []
-                },
-                {
-                    "day": "Thursday, 04",
-                    "foodCategories": []
-                },
-                {
-                    "day": "Friday, 05",
-                    "foodCategories": []
-                },
-                {
-                    "day": "Monday, 08",
-                    "foodCategories": []
-                },
-                {
-                    "day": "Tuesday, 09",
+                    "day": "09",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -98,7 +78,7 @@
                     ]
                 },
                 {
-                    "day": "Wednesday, 10",
+                    "day": "10",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -147,7 +127,7 @@
                     ]
                 },
                 {
-                    "day": "Thursday, 11",
+                    "day": "11",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -204,7 +184,7 @@
                     ]
                 },
                 {
-                    "day": "Friday, 12",
+                    "day": "12",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -249,11 +229,11 @@
                     ]
                 },
                 {
-                    "day": "Monday, 15",
+                    "day": "15",
                     "foodCategories": []
                 },
                 {
-                    "day": "Tuesday, 16",
+                    "day": "16",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -306,7 +286,7 @@
                     ]
                 },
                 {
-                    "day": "Wednesday, 17",
+                    "day": "17",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -355,7 +335,7 @@
                     ]
                 },
                 {
-                    "day": "Thursday, 18",
+                    "day": "18",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -412,7 +392,7 @@
                     ]
                 },
                 {
-                    "day": "Friday, 19",
+                    "day": "19",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -465,7 +445,7 @@
                     ]
                 },
                 {
-                    "day": "Monday, 22",
+                    "day": "22",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -518,7 +498,7 @@
                     ]
                 },
                 {
-                    "day": "Tuesday, 23",
+                    "day": "23",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -575,7 +555,7 @@
                     ]
                 },
                 {
-                    "day": "Wednesday, 24",
+                    "day": "24",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -624,7 +604,7 @@
                     ]
                 },
                 {
-                    "day": "Thursday, 25",
+                    "day": "25",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -677,7 +657,7 @@
                     ]
                 },
                 {
-                    "day": "Friday, 26",
+                    "day": "26",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -722,7 +702,7 @@
                     ]
                 },
                 {
-                    "day": "Monday, 29",
+                    "day": "29",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -771,7 +751,7 @@
                     ]
                 },
                 {
-                    "day": "Tuesday, 30",
+                    "day": "30",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -820,7 +800,7 @@
                     ]
                 },
                 {
-                    "day": "Wednesday, 31",
+                    "day": "31",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -863,14 +843,6 @@
                             ]
                         }
                     ]
-                },
-                {
-                    "day": "Empty Calendar Day",
-                    "foodCategories": []
-                },
-                {
-                    "day": "Empty Calendar Day",
-                    "foodCategories": []
                 }
             ]
         }

@@ -15,11 +15,14 @@ import os
 
 load_dotenv()
 
-logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s')
+logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s')
 
 # Create a stream handler
 console = logging.StreamHandler()
-console.setLevel(logging.DEBUG)
+console.setLevel(logging.INFO)
+
+isWriteToFile = True
+isWriteToDatabase = True
 
 # Add the stream handler to the root logger
 logging.getLogger('').addHandler(console)
@@ -58,15 +61,14 @@ day_wrappers = driver.find_elements(By.CLASS_NAME, 'menu-day-wrapper')
 for day_text in day_wrappers:
     logging.info("day.text = ", day_text.text)
     day_parts = day_text.text.split("\n")
-    day_of_week = day_parts[0]
     if len(day_parts) > 1:
         day_of_month = day_parts[1]
-        day_string = f"{day_of_week}, {day_of_month}"
+        day_string = f"{day_of_month}"
+        logging.info("day_string = ", day_string)
+        day = Day(day_string, [])
+        month.days.append(day)      
     else:
-        day_string = day_of_week
-    logging.info("day_string = ", day_string)
-    day = Day(day_string, [])
-    month.days.append(day)
+        continue
 
     food_categories_and_food_items = day_text.find_elements(By.CLASS_NAME, 'menu-entrees')
     logging.info("food_categories_and_food_items = ", food_categories_and_food_items)
@@ -82,9 +84,6 @@ for day_text in day_wrappers:
     # within day, find the category.item-data
     category_item_datas = day_text.find_elements(By.CLASS_NAME, 'category.item-data')
 
-    # for category_item_data in category_item_datas:
-    #     logging.debug("category_item_data = %s", category_item_data.text)
-    
     food_category = []
     for food_text in food_array:
         logging.info("food_text = %s", food_text)
@@ -100,34 +99,31 @@ for day_text in day_wrappers:
 # Close the browser
 driver.quit()
 
-# logging.info(school.to_dict)
-# logging.info(json.dumps(school.to_dict(), indent=4))
-with open('school.json', 'w') as f:
-    json.dump(school.to_dict(), f, indent=4)
+if isWriteToFile:
+    with open('school.json', 'w') as f:
+        json.dump(school.to_dict(), f, indent=4)
 
-logging.info("School data written to school.json")
+    logging.info("School data written to school.json")
 
 dict_bytes = json.dumps(school.to_dict()).encode()
 hash_obj = hashlib.sha256(dict_bytes)
 hash_hex = hash_obj.hexdigest()
 logging.info(hash_hex)
 
+if isWriteToDatabase:
+    try:
+        mongodb_url = os.getenv('MONGODB_URL')
+        client = MongoClient(mongodb_url)
+        db = client['your_database']
+        collection = db['school']
+        school_dict = school.to_dict()
 
-try:
-    mongodb_url = os.getenv('MONGODB_URL')
+        collection.insert_one(school_dict)
+        logging.info("School data inserted into MongoDB")
 
-    client = MongoClient(mongodb_url)
-    db = client['your_database']
-    collection = db['school']
-    school_dict = school.to_dict()
-
-    collection.insert_one(school_dict)
-
-    logging.info("School data inserted into MongoDB")
-
-except Exception as e:
-    logging.error("An error occurred while inserting data into MongoDB: %s", str(e))
-finally:
-    client.close()
+    except Exception as e:
+        logging.error("An error occurred while inserting data into MongoDB: %s", str(e))
+    finally:
+        client.close()
 
 logging.info("Done")

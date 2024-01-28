@@ -9,3 +9,4 @@ flask_pymongo
 fastapi
 uvicorn
 pymongo
+holidays
