@@ -15,11 +15,11 @@ import os
 
 load_dotenv()
 
+logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s')
 
-logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 # Create a stream handler
 console = logging.StreamHandler()
-console.setLevel(logging.INFO)
+console.setLevel(logging.DEBUG)
 
 # Add the stream handler to the root logger
 logging.getLogger('').addHandler(console)
@@ -47,7 +47,7 @@ driver.get('http://127.0.0.1:5500/test3.html')
 school = School('TestSchool', [])
 
 monthName = driver.find_element(By.CLASS_NAME, 'msm-calender-month').text
-print("month = ", monthName)
+logging.info("month = ", monthName)
 month = Month(monthName, [])
 school.months.append(month)
 
@@ -56,7 +56,7 @@ day_wrappers = driver.find_elements(By.CLASS_NAME, 'menu-day-wrapper')
 
 # Print the text of each div
 for day_text in day_wrappers:
-    print("day.text = ", day_text.text)
+    logging.info("day.text = ", day_text.text)
     day_parts = day_text.text.split("\n")
     day_of_week = day_parts[0]
     if len(day_parts) > 1:
@@ -64,12 +64,12 @@ for day_text in day_wrappers:
         day_string = f"{day_of_week}, {day_of_month}"
     else:
         day_string = day_of_week
-    print("day_string = ", day_string)
+    logging.info("day_string = ", day_string)
     day = Day(day_string, [])
     month.days.append(day)
 
     food_categories_and_food_items = day_text.find_elements(By.CLASS_NAME, 'menu-entrees')
-    print("food_categories_and_food_items = ", food_categories_and_food_items)
+    logging.info("food_categories_and_food_items = ", food_categories_and_food_items)
    
     if(len(food_categories_and_food_items) == 0):
         continue
@@ -77,44 +77,40 @@ for day_text in day_wrappers:
     food_categories_items = food_categories_and_food_items[0]
     food_array = food_categories_items.text.split("\n")
    
-    for item in food_array:
-        if(item in NO_SCHOOL_DAYS):
-            continue
-        food_category_old = []
-        food_item_old ={}
-        # within day, find the category.item-data
-        category_item_datas = day_text.find_elements(By.CLASS_NAME, 'category.item-data')
-        for category_item_data in category_item_datas:
-            print(category_item_data)
-        
-        current_food_category = ""
-        is_new_food_category = False
-        food_category = []
-        for food_text in food_array:
-            print("food_text = ", food_text)
-            if food_text in BREAK_FOOD_CATEGORIES:
-                print("food_category = ", food_text)
-                food_category = FoodCategory(food_text, [])
-                day.foodCategories.append(food_category)
-            else:
-                print("food_item = ", food_text)
-                food_item = FoodItem(food_text, [])
-                food_category.foodItems.append(food_item)
+    if(food_array[0] in NO_SCHOOL_DAYS):
+        continue
+    # within day, find the category.item-data
+    category_item_datas = day_text.find_elements(By.CLASS_NAME, 'category.item-data')
+
+    # for category_item_data in category_item_datas:
+    #     logging.debug("category_item_data = %s", category_item_data.text)
+    
+    food_category = []
+    for food_text in food_array:
+        logging.info("food_text = %s", food_text)
+        if food_text in BREAK_FOOD_CATEGORIES:
+            logging.info("food_category = ", food_text)
+            food_category = FoodCategory(food_text, [])
+            day.foodCategories.append(food_category)
+        else:
+            logging.info("food_item = ", food_text)
+            food_item = FoodItem(food_text, [])
+            food_category.foodItems.append(food_item)
     
 # Close the browser
 driver.quit()
 
-# print(school.to_dict)
-# print(json.dumps(school.to_dict(), indent=4))
+# logging.info(school.to_dict)
+# logging.info(json.dumps(school.to_dict(), indent=4))
 with open('school.json', 'w') as f:
     json.dump(school.to_dict(), f, indent=4)
 
-print("School data written to school.json")
+logging.info("School data written to school.json")
 
 dict_bytes = json.dumps(school.to_dict()).encode()
 hash_obj = hashlib.sha256(dict_bytes)
 hash_hex = hash_obj.hexdigest()
-print(hash_hex)
+logging.info(hash_hex)
 
 
 try:
