@@ -4,3 +4,7 @@ selenium
 webdriver_manager
 pymongo[srv]
 python-dotenv
+flask
+flask_pymongo
+fastapi
+uvicorn
