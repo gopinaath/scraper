@@ -43,14 +43,14 @@ options.add_argument('--ignore-certificate-errors')
 driver = webdriver.Chrome(service=webdriver_service, options=options)
 
 # Navigate to the webpage
-# driver.get('https://www.myschoolmenus.com/organizations/610/sites/10194/menus/47941')
-driver.get('http://127.0.0.1:5500/test3.html')
+driver.get('https://www.myschoolmenus.com/organizations/610/sites/10194/menus/47941')
+# driver.get('http://127.0.0.1:5500/test3.html')
 
 # hard code school 
 school = School('TestSchool', [])
 
 monthName = driver.find_element(By.CLASS_NAME, 'msm-calender-month').text
-logging.info("month = ", monthName)
+logging.info("month = %s", monthName)  # Fix: Add '%s' to format the log message
 month = Month(monthName, [])
 school.months.append(month)
 
@@ -59,19 +59,19 @@ day_wrappers = driver.find_elements(By.CLASS_NAME, 'menu-day-wrapper')
 
 # Print the text of each div
 for day_text in day_wrappers:
-    logging.info("day.text = ", day_text.text)
+    logging.info("day.text = %s", day_text.text)
     day_parts = day_text.text.split("\n")
     if len(day_parts) > 1:
         day_of_month = day_parts[1]
         day_string = f"{day_of_month}"
-        logging.info("day_string = ", day_string)
+        logging.info("day_string = %s", day_string)
         day = Day(day_string, [])
         month.days.append(day)      
     else:
         continue
 
     food_categories_and_food_items = day_text.find_elements(By.CLASS_NAME, 'menu-entrees')
-    logging.info("food_categories_and_food_items = ", food_categories_and_food_items)
+    logging.info("food_categories_and_food_items = %s", food_categories_and_food_items)
    
     if(len(food_categories_and_food_items) == 0):
         continue
@@ -88,11 +88,11 @@ for day_text in day_wrappers:
     for food_text in food_array:
         logging.info("food_text = %s", food_text)
         if food_text in BREAK_FOOD_CATEGORIES:
-            logging.info("food_category = ", food_text)
+            logging.info("food_category = %s", food_text)
             food_category = FoodCategory(food_text, [])
             day.foodCategories.append(food_category)
         else:
-            logging.info("food_item = ", food_text)
+            logging.info("food_item = %s", food_text)
             food_item = FoodItem(food_text, [])
             food_category.foodItems.append(food_item)
     

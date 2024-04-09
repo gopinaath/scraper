@@ -2,263 +2,34 @@
     "schoolName": "TestSchool",
     "months": [
         {
-            "monthName": "April",
+            "monthName": "January",
             "days": [
                 {
                     "day": "01",
-                    "foodCategories": [
-                        {
-                            "categoryName": "Lunch Entree",
-                            "foodItems": [
-                                {
-                                    "itemName": "Grilled Cheese Sandwich",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Grab 'n' Go Lunch",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Vegetables",
-                            "foodItems": [
-                                {
-                                    "itemName": "Mixed Green Salad",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Fruit",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Milk",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fat Free Milk, Unflavored",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "1% Organic Milk, Unflavored",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        }
-                    ]
+                    "foodCategories": []
                 },
                 {
                     "day": "02",
-                    "foodCategories": [
-                        {
-                            "categoryName": "Lunch Entree",
-                            "foodItems": [
-                                {
-                                    "itemName": "Penne Marinara with Veggie Meatballs",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Grab 'n' Go Lunch",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Vegetables",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Fruit",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Milk",
-                            "foodItems": [
-                                {
-                                    "itemName": "1% Organic Milk, Unflavored",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Fat Free Milk, Unflavored",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        }
-                    ]
+                    "foodCategories": []
                 },
                 {
                     "day": "03",
-                    "foodCategories": [
-                        {
-                            "categoryName": "Lunch Entree",
-                            "foodItems": [
-                                {
-                                    "itemName": "Quesadilla",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Grab 'n' Go Lunch",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Vegetables",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Fruit",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Milk",
-                            "foodItems": [
-                                {
-                                    "itemName": "1% Organic Milk, Unflavored",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Fat Free Milk, Unflavored",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        }
-                    ]
+                    "foodCategories": []
                 },
                 {
                     "day": "04",
-                    "foodCategories": [
-                        {
-                            "categoryName": "Lunch Entree",
-                            "foodItems": [
-                                {
-                                    "itemName": "Turkey and Cheese Sandwich",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Veggie Cheese Sandwich",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Grab 'n' Go Lunch",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Vegetables",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Fruit",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Milk",
-                            "foodItems": [
-                                {
-                                    "itemName": "1% Organic Milk, Unflavored",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Fat Free Milk, Unflavored",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        }
-                    ]
+                    "foodCategories": []
                 },
                 {
                     "day": "05",
-                    "foodCategories": [
-                        {
-                            "categoryName": "Lunch Entree",
-                            "foodItems": [
-                                {
-                                    "itemName": "Bean & Cheese Burrito",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Grab 'n' Go Lunch",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Vegetables",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Fruit",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Milk",
-                            "foodItems": [
-                                {
-                                    "itemName": "1% Organic Milk, Unflavored",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Fat Free Milk, Unflavored",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        }
-                    ]
+                    "foodCategories": []
                 },
                 {
                     "day": "08",
+                    "foodCategories": []
+                },
+                {
+                    "day": "09",
                     "foodCategories": [
                         {
                             "categoryName": "Lunch Entree",
@@ -276,67 +47,6 @@
                         {
                             "categoryName": "Vegetables",
                             "foodItems": [
-                                {
-                                    "itemName": "Mixed Green Salad",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Fruit",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Milk",
-                            "foodItems": [
-                                {
-                                    "itemName": "1% Organic Milk, Unflavored",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Fat Free Milk, Unflavored",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "day": "09",
-                    "foodCategories": [
-                        {
-                            "categoryName": "Lunch Entree",
-                            "foodItems": [
-                                {
-                                    "itemName": "Turkey Nachos",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Veggie Nachos",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Grab 'n' Go Lunch",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Vegetables",
-                            "foodItems": [
-                                {
-                                    "itemName": "Side Salsa",
-                                    "attributeCategories": []
-                                },
                                 {
                                     "itemName": "Fresh Fruit Variety",
                                     "attributeCategories": []
@@ -374,7 +84,7 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Pasta Primavera",
+                                    "itemName": "Veggie Chili Cheese Fries",
                                     "attributeCategories": []
                                 },
                                 {
@@ -423,6 +133,14 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
+                                    "itemName": "Teriyaki Chicken Bowl",
+                                    "attributeCategories": []
+                                },
+                                {
+                                    "itemName": "Teriyaki Tofu Bowl",
+                                    "attributeCategories": []
+                                },
+                                {
                                     "itemName": "Grab 'n' Go Lunch",
                                     "attributeCategories": []
                                 }
@@ -431,6 +149,10 @@
                         {
                             "categoryName": "Vegetables",
                             "foodItems": [
+                                {
+                                    "itemName": "Roasted Broccoli",
+                                    "attributeCategories": []
+                                },
                                 {
                                     "itemName": "Fresh Fruit Variety",
                                     "attributeCategories": []
@@ -468,7 +190,7 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Grab 'n' Go Lunch",
+                                    "itemName": "Pizza",
                                     "attributeCategories": []
                                 }
                             ]
@@ -508,56 +230,7 @@
                 },
                 {
                     "day": "15",
-                    "foodCategories": [
-                        {
-                            "categoryName": "Lunch Entree",
-                            "foodItems": [
-                                {
-                                    "itemName": "Grilled Cheese Sandwich",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Grab 'n' Go Lunch",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Vegetables",
-                            "foodItems": [
-                                {
-                                    "itemName": "Mixed Green Salad",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Fruit",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fresh Fruit Variety",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        },
-                        {
-                            "categoryName": "Milk",
-                            "foodItems": [
-                                {
-                                    "itemName": "Fat Free Milk, Unflavored",
-                                    "attributeCategories": []
-                                },
-                                {
-                                    "itemName": "1% Organic Milk, Unflavored",
-                                    "attributeCategories": []
-                                }
-                            ]
-                        }
-                    ]
+                    "foodCategories": []
                 },
                 {
                     "day": "16",
@@ -566,7 +239,11 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Tomato Soup w/ Italian Dipper",
+                                    "itemName": "Penne with Turkey Bolognese",
+                                    "attributeCategories": []
+                                },
+                                {
+                                    "itemName": "Penne Marinara with Veggie Bolognese",
                                     "attributeCategories": []
                                 },
                                 {
@@ -615,7 +292,7 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Pesto Pasta",
+                                    "itemName": "Tomato Soup w/ Italian Dipper",
                                     "attributeCategories": []
                                 },
                                 {
@@ -627,10 +304,6 @@
                         {
                             "categoryName": "Vegetables",
                             "foodItems": [
-                                {
-                                    "itemName": "Cherry Tomatoes",
-                                    "attributeCategories": []
-                                },
                                 {
                                     "itemName": "Fresh Fruit Variety",
                                     "attributeCategories": []
@@ -685,6 +358,10 @@
                             "categoryName": "Vegetables",
                             "foodItems": [
                                 {
+                                    "itemName": "Sweet Green Peas",
+                                    "attributeCategories": []
+                                },
+                                {
                                     "itemName": "Fresh Fruit Variety",
                                     "attributeCategories": []
                                 }
@@ -721,7 +398,7 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Mac 'n' Cheese",
+                                    "itemName": "Breakfast Burrito for Lunch",
                                     "attributeCategories": []
                                 },
                                 {
@@ -734,7 +411,7 @@
                             "categoryName": "Vegetables",
                             "foodItems": [
                                 {
-                                    "itemName": "Mixed Green Salad",
+                                    "itemName": "Side Salsa",
                                     "attributeCategories": []
                                 },
                                 {
@@ -769,7 +446,56 @@
                 },
                 {
                     "day": "22",
-                    "foodCategories": []
+                    "foodCategories": [
+                        {
+                            "categoryName": "Lunch Entree",
+                            "foodItems": [
+                                {
+                                    "itemName": "Grilled Cheese Sandwich",
+                                    "attributeCategories": []
+                                },
+                                {
+                                    "itemName": "Grab 'n' Go Lunch",
+                                    "attributeCategories": []
+                                }
+                            ]
+                        },
+                        {
+                            "categoryName": "Vegetables",
+                            "foodItems": [
+                                {
+                                    "itemName": "Creamy Tomato Basil Soup",
+                                    "attributeCategories": []
+                                },
+                                {
+                                    "itemName": "Side of Corn",
+                                    "attributeCategories": []
+                                }
+                            ]
+                        },
+                        {
+                            "categoryName": "Fruit",
+                            "foodItems": [
+                                {
+                                    "itemName": "Fresh Fruit Variety",
+                                    "attributeCategories": []
+                                }
+                            ]
+                        },
+                        {
+                            "categoryName": "Milk",
+                            "foodItems": [
+                                {
+                                    "itemName": "1% Organic Milk, Unflavored",
+                                    "attributeCategories": []
+                                },
+                                {
+                                    "itemName": "Fat Free Milk, Unflavored",
+                                    "attributeCategories": []
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "day": "23",
@@ -777,6 +503,10 @@
                         {
                             "categoryName": "Lunch Entree",
                             "foodItems": [
+                                {
+                                    "itemName": "Turkey Tacos",
+                                    "attributeCategories": []
+                                },
                                 {
                                     "itemName": "Veggie Tacos",
                                     "attributeCategories": []
@@ -831,7 +561,7 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Veggie Chili Cheese Fries",
+                                    "itemName": "Pasta Primavera",
                                     "attributeCategories": []
                                 },
                                 {
@@ -880,11 +610,11 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Teriyaki Chicken Bowl",
+                                    "itemName": "Bibimbap with Chicken",
                                     "attributeCategories": []
                                 },
                                 {
-                                    "itemName": "Teriyaki Tofu Bowl",
+                                    "itemName": "Bibimbap with Tofu",
                                     "attributeCategories": []
                                 },
                                 {
@@ -933,7 +663,7 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Grab 'n' Go Lunch",
+                                    "itemName": "Pizza",
                                     "attributeCategories": []
                                 }
                             ]
@@ -978,7 +708,7 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Grilled Cheese Sandwich",
+                                    "itemName": "Vegetable Lasagna",
                                     "attributeCategories": []
                                 },
                                 {
@@ -990,10 +720,6 @@
                         {
                             "categoryName": "Vegetables",
                             "foodItems": [
-                                {
-                                    "itemName": "Mixed Green Salad",
-                                    "attributeCategories": []
-                                },
                                 {
                                     "itemName": "Fresh Fruit Variety",
                                     "attributeCategories": []
@@ -1031,9 +757,54 @@
                             "categoryName": "Lunch Entree",
                             "foodItems": [
                                 {
-                                    "itemName": "Penne Marinara with Veggie Meatballs",
+                                    "itemName": "Turkey Nachos",
                                     "attributeCategories": []
                                 },
+                                {
+                                    "itemName": "Veggie Nachos",
+                                    "attributeCategories": []
+                                }
+                            ]
+                        },
+                        {
+                            "categoryName": "Vegetables",
+                            "foodItems": [
+                                {
+                                    "itemName": "Fresh Fruit Variety",
+                                    "attributeCategories": []
+                                }
+                            ]
+                        },
+                        {
+                            "categoryName": "Fruit",
+                            "foodItems": [
+                                {
+                                    "itemName": "Fresh Fruit Variety",
+                                    "attributeCategories": []
+                                }
+                            ]
+                        },
+                        {
+                            "categoryName": "Milk",
+                            "foodItems": [
+                                {
+                                    "itemName": "1% Organic Milk, Unflavored",
+                                    "attributeCategories": []
+                                },
+                                {
+                                    "itemName": "Fat Free Milk, Unflavored",
+                                    "attributeCategories": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "day": "31",
+                    "foodCategories": [
+                        {
+                            "categoryName": "Lunch Entree",
+                            "foodItems": [
                                 {
                                     "itemName": "Grab 'n' Go Lunch",
                                     "attributeCategories": []
