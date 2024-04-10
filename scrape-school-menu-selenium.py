@@ -114,8 +114,8 @@ if isWriteToDatabase:
     try:
         mongodb_url = os.getenv('MONGODB_URL')
         client = MongoClient(mongodb_url)
-        db = client['your_database']
-        collection = db['school']
+        db = client['school']
+        collection = db['menu']
         school_dict = school.to_dict()
 
         collection.insert_one(school_dict)

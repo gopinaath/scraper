@@ -40,30 +40,40 @@ async def get_food_categories(school: str, month: str, day: str):
         client = MongoClient(mongodb_url)
 
         # Get or create the 'school' collection
-        school_collection = client.get_database('your_database').get_collection('school')
+        school_collection = client.get_database('school').get_collection('menu')
         print("school_collection = ", school_collection)
 
-        # Now creating a Cursor instance 
-        # using find() function 
-        cursor = school_collection.find() 
+        # # Now creating a Cursor instance 
+        # # using find() function 
+        # cursor = school_collection.find() 
         
-        # Converting cursor to the list  
-        # of dictionaries 
-        list_cur = list(cursor) 
+        # # Converting cursor to the list  
+        # # of dictionaries 
+        # list_cur = list(cursor) 
         
-        # Converting to the JSON 
-        json_data = dumps(list_cur, indent = 2)  
-        print(json_data)
+        # # Converting to the JSON 
+        # json_data = dumps(list_cur, indent = 2)  
+        # print(json_data)
 
-        school_data = school_collection.find_one({"name": school})
+        school_data = school_collection.find_one({"schoolName": school})
         if not school_data:
             raise HTTPException(status_code=404, detail="School not found :"+school)
 
-        month_data = next((item for item in school_data['months'] if item["name"] == month), None)
+        # month_data = next((item for item in school_data['months'] if item['monthName'] == month), None)
+        month_data = None
+        for item in school_data['months']:
+            if item['monthName'] == month:
+                month_data = item
+                break
         if not month_data:
             raise HTTPException(status_code=404, detail="Month not found")
 
-        day_data = next((item for item in month_data['days'] if item["name"] == day), None)
+        # day_data = next((item for item in month_data['days'] if item['name'] == day), None)
+        day_data = None
+        for item in month_data['days']:
+            if item['day'] == day:
+                day_data = item
+                break
         if not day_data:
             raise HTTPException(status_code=404, detail="Day not found")
 
